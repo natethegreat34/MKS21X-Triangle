@@ -28,3 +28,8 @@ return Math.pow (Math.pow((this.getX() - b.getX()), 2) + Math.pow((this.getY() -
 public distance(Point a, Point b){
 return Math.pow (Math.pow((a.getX() - b.getX()), 2) + Math.pow((a.getY() - b.getY()), 2), 1/2);
 }
+
+public toString() {
+  return "Horizontal" + getX() + "" + "Vertical" + getY()
+}
+}
