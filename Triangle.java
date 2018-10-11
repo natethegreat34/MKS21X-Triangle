@@ -4,8 +4,8 @@ public class Triangle{
 private Point p1, p2, p3;
 public Triangle (Point v1, Point v2, Point v3);
 public Triangle (double v1.getX(), double v1.getY(),
-                double v2.getX(), double v2.getY()
-                double v3.getX(), double v3.getY());
+                 double v2.getX(), double v2.getY(),
+                 double v3.getX(), double v3.getY());
 public getPerimeter (){
   return distance (p1, p2) + distance (p1, p3) + distance (p2, p3);
 }
