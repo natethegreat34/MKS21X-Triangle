@@ -19,17 +19,17 @@ public double getY(){
   return y;
 }
 
-public distanceTo(Point p){
-return Math.pow (Math.pow((this.getX() - b.getX()), 2) + Math.pow((this.getY() - b.getY()), 2), 1/2);
+public double distanceTo(Point p){
+return Math.pow (Math.pow((this.getX() - p.getX()), 2) + Math.pow((this.getY() - p.getY()), 2), 1/2);
 
 }
 
 
-public distance(Point a, Point b){
+public static double distance(Point a, Point b){
 return Math.pow (Math.pow((a.getX() - b.getX()), 2) + Math.pow((a.getY() - b.getY()), 2), 1/2);
 }
 
-public toString() {
-  return "Horizontal" + getX() + "" + "Vertical" + getY()
+public String toString() {
+  return "Horizontal" + x + "" + "Vertical" + y ;
 }
 }

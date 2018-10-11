@@ -1,36 +1,38 @@
 public class Triangle{
   public static void main(String[]args){
   }
-private Point p1, p2, p3;
-public Triangle (Point v1, Point v2, Point v3){
-  p1 = new Point (v1.getX(),v1.getY());
-  p2 = new Point (v2.getX(),v3.getY());
-  p3 = new Point (v2.getX(),v3.getY());
+private Point v1, v2, v3;
+public Triangle (Point v1a, Point v2a, Point v3a){
+  v1 = v1a;
+  v2 = v2a;
+  v3 = v3a;
 }
 public Triangle (double a, double a1, double b, double b1, double c, double c1){
-  p1 = new Point (a, a1);
-  p2 = new Point (b, b1);
-  p3 = new Point (c, c1);
+  v1 = new Point (a, a1);
+  v2 = new Point (b, b1);
+  v3 = new Point (c, c1);
                  }
-public getPerimeter (){
-  return distance (p1, p2) + distance (p1, p3) + distance (p2, p3);
+public double getPerimeter (){
+double v1v2 = v1.distanceTo (v2);
+double v2v3 = v2.distanceTo (v3);
+double v1v3 = v1.distanceTo (v3);
+return v1v2 + v2v3 + v1v3;
 }
 
-public getVertex (int index){
-  if (index == 1){return p1};
-  if (index == 2){return p2};
-  if (index == 3){return p3};
+public Point getVertex (int index){
+  if (index == 0){return v1;}
+  if (index == 1){return v2;}
+  if (index == 2){return v3;}
+  return null;
 }
 
-public setVertex(int index, Point newP){
-  if (index == 1){p1 = newP};
-  if (index == 2){p2 = newP};
-  if (index == 3){p3 = newP};
+public void setVertex(int index, Point newP){
+  if (index == 0){v1 = newP;}
+  if (index == 1){v2 = newP;}
+  if (index == 2){v3 = newP;}
 }
 
-public toString(){
-  return "Triangle: " + "A (" + p1.getX() + "," + p1.getY() + ")" +
-                        "B (" + p2.getX() + "," + p2.getY() + ")" +
-                        "C (" + p3.getX() + "," + p3.getY() + ")" ;
+public String toString(){
+  return "Triangle: " + "A (" + v1.toString() + ") , B (" + v2.toString() + ", C (" + v3.toString() + ")" ;
 }
 }
