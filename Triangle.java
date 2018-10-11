@@ -2,10 +2,16 @@ public class Triangle{
   public static void main(String[]args){
   }
 private Point p1, p2, p3;
-public Triangle (Point v1, Point v2, Point v3);
-public Triangle (double v1.getX(), double v1.getY(),
-                 double v2.getX(), double v2.getY(),
-                 double v3.getX(), double v3.getY());
+public Triangle (Point v1, Point v2, Point v3){
+  p1 = new Point (v1.getX(),v1.getY());
+  p2 = new Point (v2.getX(),v3.getY());
+  p3 = new Point (v2.getX(),v3.getY());
+}
+public Triangle (double a, double a1, double b, double b1, double c, double c1){
+  p1 = new Point (a, a1);
+  p2 = new Point (b, b1);
+  p3 = new Point (c, c1);
+                 }
 public getPerimeter (){
   return distance (p1, p2) + distance (p1, p3) + distance (p2, p3);
 }
